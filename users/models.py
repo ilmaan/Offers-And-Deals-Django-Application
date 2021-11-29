@@ -16,10 +16,10 @@ GENDER_CHOICES = (
 class Customer(models.Model):
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100,blank=True)
     email = models.EmailField(blank=False, unique=True)
-    age = models.IntegerField()
-    gender = models.CharField( choices=GENDER_CHOICES, max_length=50)
+    age = models.IntegerField(blank=True)
+    gender = models.CharField( choices=GENDER_CHOICES, max_length=50,blank=True)
     mobile = models.CharField(max_length=12)
     country = models.CharField(max_length=100)
 

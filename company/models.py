@@ -8,6 +8,7 @@ from users.models import *
 
 class Company(models.Model):
     
+    
     company_name = models.CharField(max_length=100)
     company_logo = models.ImageField(blank=True)
     company_type = models.CharField()
